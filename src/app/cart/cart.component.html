@@ -4,10 +4,22 @@
     <a routerLink="/shipping">Shipping Prices</a>
 </p>
 
-<div class="cart-item" *ngFor="let item of items">
+
+<mat-list *ngFor="let item of items">
+    <mat-list>
+        <div class="cart-item">
+            <span>{{ item.name }}</span>
+            <span>{{ item.price | currency }}</span>
+            <mat-icon (click)="removeItem(item.id)" fontIcon="delete"></mat-icon>
+        </div>
+    </mat-list>
+</mat-list>
+
+<!-- <div class="cart-item" *ngFor="let item of items">
     <span>{{ item.name }}</span>
     <span>{{ item.price | currency }}</span>
-</div>
+    <span (click)="removeItem(item.id)">X</span>
+</div> -->
 
 <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
     <div>

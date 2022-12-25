@@ -27,5 +27,11 @@ export class CartComponent {
     this.checkoutForm.reset();
   }
 
+  removeItem(id: number) {
+    console.log(this.items);
+    this.items.splice(this.items.findIndex(x => x.id === id), 1);
+    this.cartService.countObserver.next(this.items.length);
+  }
+
 
 }

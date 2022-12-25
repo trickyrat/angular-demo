@@ -2,6 +2,12 @@
     <h1>My Store</h1>
 </a>
 
+<mat-menu routerLink="/products" #menu="matMenu">
+    Products
+</mat-menu>
+
 <a routerLink="/cart" class="button fancy-button">
-    <i class="material-icons">shopping_cart</i>Checkout
+    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="shopping_cart" [matBadge]=productCount
+        [matBadgeHidden]="productCount < 1 ? true : false" matBadgeColor="warn"></mat-icon>
+    Checkout
 </a>

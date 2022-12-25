@@ -1,20 +1,26 @@
 <h2>Products</h2>
-<div *ngFor="let product of products">
-    <h3>
-        <a [title]="product.name + ' details'" [routerLink]="['/products', product.id]">
-            {{product.name}}
-        </a>
-    </h3>
 
-    <p *ngIf="product.description">
-        Description: {{ product.description }}
-    </p>
-
-    <button type="button" (click)="share()">
-        Share
-    </button>
-
-    <app-product-alerts [product]="product" (notify)="onNotify()">
-
-    </app-product-alerts>
+<div class="product-list-container">
+    <mat-card *ngFor="let product of products">
+        <mat-card-title>
+            <a [title]="product.name + ' details'" [routerLink]="['/products', product.id]">
+                {{product.name}}
+            </a>
+        </mat-card-title>
+        <mat-card-subtitle>
+            <span>{{ product.price | currency }}</span>
+        </mat-card-subtitle>
+        <img mat-card-image [src]="product.imgurl" alt="Photo of iPhone 14 ">
+        <mat-card-content>
+            <p *ngIf="product.description">
+                {{ product.description }}
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="primary" (click)="share()">
+                Share
+            </button>
+            <app-product-alerts [product]="product" (notify)="onNotify()"></app-product-alerts>
+        </mat-card-actions>
+    </mat-card>
 </div>
