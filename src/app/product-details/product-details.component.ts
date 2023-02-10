@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CartService } from '../cart.service';
-import { Product, products } from '../product';
+import { Product, PRODUCTS } from '../product';
 
 @Component({
   selector: 'app-product-details',
@@ -20,7 +20,7 @@ export class ProductDetailsComponent implements OnInit {
   ngOnInit(): void {
     const routeParams = this.route.snapshot.paramMap;
     const productIdFromRoute = Number(routeParams.get("productId"));
-    this.product = products.find(p => p.id === productIdFromRoute);
+    this.product = PRODUCTS.find(p => p.id === productIdFromRoute);
   }
 
   addToCart(product: Product) {

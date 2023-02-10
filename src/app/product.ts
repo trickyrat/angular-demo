@@ -10,7 +10,7 @@ export interface Product {
 }
 
 
-export const products: Product[] = [
+export const PRODUCTS: Product[] = [
     {
         id: 1,
         name: "Phone 14",
@@ -40,6 +40,24 @@ export const products: Product[] = [
     },
     {
         id: 4,
+        name: "Phone 14 Pro Max",
+        price: 1399,
+        description: "The new iPhone with multiple colors.\r\nOur longest battery life ever.\r\nEmergency SOS via satellite.\r\nEpic Pro-level photos and videos.\r\nWonderfull.",
+        imgurl: "../../assets/hero_blue__fkesnsm4u5qy_large.png",
+        skus: [
+        ]
+    },
+    {
+        id: 5,
+        name: "Phone 14 Pro Max",
+        price: 1399,
+        description: "The new iPhone with multiple colors.\r\nOur longest battery life ever.\r\nEmergency SOS via satellite.\r\nEpic Pro-level photos and videos.\r\nWonderfull.",
+        imgurl: "../../assets/hero_blue__fkesnsm4u5qy_large.png",
+        skus: [
+        ]
+    },
+    {
+        id: 6,
         name: "Phone 14 Pro Max",
         price: 1399,
         description: "The new iPhone with multiple colors.\r\nOur longest battery life ever.\r\nEmergency SOS via satellite.\r\nEpic Pro-level photos and videos.\r\nWonderfull.",

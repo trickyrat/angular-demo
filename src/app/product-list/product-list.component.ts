@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Product, products } from "../product";
+import { Product, PRODUCTS } from "../product";
 
 @Component({
   selector: 'app-product-list',
@@ -7,7 +7,7 @@ import { Product, products } from "../product";
   styleUrls: ['./product-list.component.sass']
 })
 export class ProductListComponent {
-  products: Product[] = [...products];
+  products: Product[] = [...PRODUCTS];
 
   constructor() {
   }

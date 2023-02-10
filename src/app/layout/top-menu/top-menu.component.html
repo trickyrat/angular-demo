@@ -2,9 +2,9 @@
     <h1>My Store</h1>
 </a>
 
-<mat-menu routerLink="/products" #menu="matMenu">
+<a [routerLink]="['/products']">
     Products
-</mat-menu>
+</a>
 
 <a routerLink="/cart" class="button fancy-button">
     <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="shopping_cart" [matBadge]=productCount
